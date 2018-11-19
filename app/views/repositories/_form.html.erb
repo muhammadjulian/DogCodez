@@ -1,0 +1,62 @@
+<%= form_with(model: repository, local: true) do |form| %>
+  <% if repository.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(repository.errors.count, "error") %> prohibited this repository from being saved:</h2>
+
+      <ul>
+      <% repository.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="jumbotron">
+  <div class="row">
+
+    <div class="col-sm-8" >
+      <div class="field">
+        <%= form.label :namafile %><br>
+        <%= form.text_field :namafile,:class =>"form-control" %>
+      </div>
+    </div>
+
+    <div class="col-sm-5" >
+      <div class="field">
+        <%= form.label :textpad %><br>
+        <%= form.text_area :code ,:cols => "50",:rows=>"30",:class =>"form-control" %>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div>
+        <label> Test Drive:</label>
+        <iframe style="background-color: black;color: lime; heigth: 50%;" cols="50" class="">
+        </iframe>
+      </div>
+    </div>
+    <div class="col-sm-3" >
+      <div class="field">
+        <%= form.label :pemilik %>
+        <%= form.number_field :pemilik,:class =>"form-control" %>
+        <div class="field">
+        <%= form.label :akses %>
+        <%= form.text_field :akses,:class =>"form-control" %>
+        </div>
+        <div class="field">
+          <%= form.label :katagori %>
+          <%= form.text_field :katagori,:class =>"form-control" %>
+        </div>
+        <!--  Fitur run untuk gues ato user , save khusu user-->
+        <div class="actions">
+          <%= form.submit :Save ,:class=>"btn btn-success"%>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="col-sm-8" ></div>
+  </div>
+
+
+</div>
+<% end %>

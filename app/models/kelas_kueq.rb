@@ -1,0 +1,2 @@
+class KelasKueq < ApplicationRecord
+end

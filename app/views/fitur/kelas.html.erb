@@ -1,0 +1,58 @@
+<div class="container " style=" background-color: inherit;">
+  <div class="text-center"><h2 class="text-dark"> <%= "Judul" %></h2></div>
+  <div class="row">
+      <div class="col-sm-6">
+        <label class="text-ligth"> Video </label>
+        <div class="">
+          <video src="<%= "www.dev.to"%>" alt="gak ada anjing">
+
+          </video>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <label> Ringkasaan : </label>
+        <div class=" bg-light">
+          <div>
+            <p>
+              Ringkasaan Singkat
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <div class="col-sm-6">
+      <label> Textpad : </label>
+      <textarea class="text-nowrap" rows="10" cols="20" style="background-color: #2E2F30;color: whitesmoke; width:100%;" value="">
+        <%= "Anjing Penika warna ijo di kampung jauh gak keliatan" %>
+      </textarea>
+      <button class="btn btn-success"> Eksekusi </button>
+      <button class="btn btn-success"> Save to Repo </button>
+    </div>
+
+    <div class="col-sm-6">
+      <label> Output : </label>
+      <iframe rows="10" cols="20" style="width:100%; background-color: black; color: lime;">
+
+      </iframe>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="text-center card-body" style="background-color: inherit">
+  <button class="btn btn-warning" >&laquo;</button>
+  <label class="well text-dark"><%= "Bahsa : Ruby , Kelas : 1" %></label>
+  <button class="btn btn-danger" >&raquo;</button>
+</div>
+
+<script>
+    let a = document.getElementById("maincon");
+    a.setAttribute("style","padding-top: 5%");
+</script>

@@ -1,0 +1,2 @@
+module FiturHelper
+end

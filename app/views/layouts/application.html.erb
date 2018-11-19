@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DGRebuild</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application.js',media: 'all' %>
+    <style>
+
+      a:hover{
+        color:#fff;
+        background-color: #71dd8a;
+      }
+      .navbar{
+        margin-bottom: 0;
+        border-radius: 0;
+      }
+      .jumbotron{
+        background-color: #5fbc75;color: whitesmoke;
+      }
+      .card {
+        background-color: #5fbc75;color: whitesmoke;
+      }
+      .card-body {
+        background-color: #52a462;color: whitesmoke;
+      }
+
+    </style>
+  </head>
+
+  <body style="background-color: #dedede;">
+  <script>
+
+      anime({
+          targets: '.mainco',
+          translateX: [
+              { value: 100, duration: 1200 },
+              { value: 0, duration: 800 }
+          ],
+          rotate: '1turn',
+          backgroundColor: '#FFF',
+          duration: 2000,
+          loop: true
+      });
+  </script>
+  <nav class="navbar navbar-expand fixed-top shadow" style="background-color: #71dd8a;">
+    <div class="container-fluid" >
+      <div class="navbar-header">
+        <a href="/" class="navbar-brand">DCG-1472</a>
+      </div>
+
+      <div class="navbar-collapse container-fluid">
+        <ul class="nav navbar-nav">
+          <li><a href="#" class="btn btn-link text-dark">Tentang</a></li>
+          <li><a href="/fitur/kelas" class="btn btn-link text-dark">Kelas</a> </li>
+          <li><a href="/repositories/" class="btn btn-link text-dark">Repository</a> </li>
+          <li><a href="#" class="btn btn-link text-dark"> </a> </li>
+        </ul>
+      </div>
+      <!--  ini nanti bakalan sama sesi profile muncul kalo udah login-->
+      <div class="navbar-nav navbar-collapse">
+          <ul class="nav navbar-nav nav"></ul>
+            <li><a class="btn btn-success shadow" style="color:white;" href="<%= new_repository_path  %>"> + </a></li>
+            <% if !true %>
+              <li><a class="btn btn-link " style="color:white;" href=""> Profile </a></li>
+              <li><a class="btn btn-link " style="color:white;" href=""> Sign out </a></li>
+            <% else %>
+              <li><a class="btn btn-link " style="color:white;" href=""> Sign in </a></li>
+            <% end %>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container" id="maincon" style="padding-top: 10%;">
+    <%= yield %>
+  </div>
+  </body>
+</html>
